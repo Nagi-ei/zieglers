@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "plugins": ["@tanstack/query", "tailwindcss"],
+  "rules": {
+    "@tanstack/query/exhaustive-deps": "warn",
+    "@tanstack/query/no-rest-destructuring": "off",
+
+    "tailwindcss/classnames-order": "error",
+    "tailwindcss/no-custom-classname": "off"
+  },
+  "settings": {
+    "tailwindcss": {
+      "callees": ["clsx", "cn"],
+      "config": "tailwind.config.ts",
+      "removeDuplicates": true
+    }
+  },
+  "ignorePatterns": ["node_modules", ".next", "dist", "build", "coverage"]
+}
