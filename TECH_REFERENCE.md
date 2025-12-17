@@ -20,7 +20,7 @@ and is the top-level technical specification referenced during code generation a
 | **Language**        | TypeScript (v5.x)                                         |
 | **Package Manager** | pnpm (v10.18.2)                                           |
 | **Database**        | Supabase (PostgreSQL 15)                                  |
-| **ORM**             | Prisma (v5.x)                                             |
+| **ORM**             | Prisma (v7.2.0)                                           |
 | **Styling/UI**      | TailwindCSS (v4), shadcn/ui                               |
 | **State/Data**      | TanStack Query (v5.90.8), Zustand (v5.0.8), Zod (v4.1.12) |
 | **Form**            | react-hook-form (v7.66.0) + zodResolver (v5.2.2)          |
@@ -435,7 +435,7 @@ jobs:
 | Next.js        | 16.0.10 | App Router                          |
 | TypeScript     | 5.x     | Strict Mode                         |
 | Supabase-js    | 2.88.0  | Supports RLS and Edge Functions     |
-| Prisma         | 5.x     | Server-side ORM, schema & migration |
+| Prisma         | 7.2.0   | Server-side ORM, schema & migration |
 | TailwindCSS    | 4       | JIT                                 |
 | shadcn/ui      | Latest  | CLI installation                    |
 | TanStack Query | 5.90.12 | Supports Suspense                   |

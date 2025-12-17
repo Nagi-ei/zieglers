@@ -20,7 +20,7 @@ PRD.md에서 정의한 요구사항을 기술적으로 실현하기 위한 기�
 | **Language**        | TypeScript (v5.x)                                         |
 | **Package Manager** | pnpm (v10.18.2)                                           |
 | **Database**        | Supabase (PostgreSQL 15)                                  |
-| **ORM**             | Prisma (v5.x)                                             |
+| **ORM**             | Prisma (v7.2.0)                                           |
 | **Styling/UI**      | TailwindCSS (v4), shadcn/ui                               |
 | **State/Data**      | TanStack Query (v5.90.8), Zustand (v5.0.8), Zod (v4.1.12) |
 | **Form**            | react-hook-form (v7.66.0) + zodResolver (v5.2.2)          |
@@ -430,21 +430,22 @@ jobs:
 
 ## 14) Version Matrix
 
-| 항목           | 버전    | 비고                      |
-| -------------- | ------- | ------------------------- |
-| Node.js        | 22.14.0 | Vercel 기본 환경          |
-| Next.js        | 16.0.1  | App Router                |
-| TypeScript     | 5.x     | Strict Mode               |
-| Supabase-js    | 2.x     | RLS 및 Edge Function 대응 |
-| TailwindCSS    | 4       | JIT                       |
-| shadcn/ui      | Latest  | CLI 설치                  |
-| TanStack Query | 5.90.8  | Suspense 대응             |
-| Zustand        | 5.0.8   | Middleware 포함           |
-| Zod            | 4.1.12  | react-hook-form 연동      |
-| Biome          | 2.2.0   | ESLint 대체               |
-| Jest           | 30.2.0  | SWC 기반                  |
-| Playwright     | 1.56.1  | Chromium/Firefox/WebKit   |
-| pnpm           | 10.18.2 | monorepo 대응             |
+| 항목           | 버전    | 비고                                |
+| -------------- | ------- | ----------------------------------- |
+| Node.js        | 22.14.0 | Vercel 기본 환경                    |
+| Next.js        | 16.0.1  | App Router                          |
+| TypeScript     | 5.x     | Strict Mode                         |
+| Supabase-js    | 2.x     | RLS 및 Edge Function 대응           |
+| Prisma         | 7.2.0   | Server-side ORM, schema & migration |
+| TailwindCSS    | 4       | JIT                                 |
+| shadcn/ui      | Latest  | CLI 설치                            |
+| TanStack Query | 5.90.8  | Suspense 대응                       |
+| Zustand        | 5.0.8   | Middleware 포함                     |
+| Zod            | 4.1.12  | react-hook-form 연동                |
+| Biome          | 2.2.0   | ESLint 대체                         |
+| Jest           | 30.2.0  | SWC 기반                            |
+| Playwright     | 1.56.1  | Chromium/Firefox/WebKit             |
+| pnpm           | 10.18.2 | monorepo 대응                       |
 
 ---
 
