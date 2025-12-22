@@ -1,0 +1,38 @@
+name: Build Verification
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # 아래의 경우엔 불필요함.
+      # 1. 빌드 시점에는 API를 호출하지 않음
+      # 2. 런타임에서만 환경 변수를 사용
+      # 3. 서버 전용 변수만 사용 (NEXT_PUBLIC 아님)
+      # 4. 기본값이 코드에 있음
+
+      # - name: Set env for build
+      #   run: echo "NEXT_PUBLIC_API_URL=http://example.com" >> $GITHUB_ENV
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.14.0
+          cache: "pnpm"
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.18.2
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm run build
